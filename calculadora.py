@@ -13,4 +13,8 @@ elif funcion == 'suma':
 elif funcion == 'multiplicacion':
 	print(int(operando1) * int(operando2))
 elif funcion == 'division':
-	print(int(operando1) / int(operando2))
+    try:
+		print(int(operando1) / int(operando2))
+	except ZeroDivisionError:
+		sys.exit("No se puede dividir entre 0")
+ 
